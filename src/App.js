@@ -1,19 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import Navbar from './component/Home/Navbar/Navbar';
-import Banner from './component/Home/Banner/Banner';
-import LawSections from './component/Home/LawSections/LawSections';
-import Blog from './component/Home/Blog/Blog';
-import Footer from './component/Home/Footer/Footer';
+import Home from './component/Home/Home';
+import News from './component/News/News';
 
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
-      <Banner></Banner>
-      <LawSections></LawSections>
-      <Blog></Blog>
-      <Footer></Footer>
+      <BrowserRouter>
+        <Navbar></Navbar>
+        <Routes>
+          <Route path="/" element={<Home></Home>}></Route>
+          <Route path="/News" element={<News></News>}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

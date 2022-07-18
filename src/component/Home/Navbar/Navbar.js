@@ -1,5 +1,6 @@
 import React from 'react';
-import img1 from "../../../recource/WhatsApp Image 2022-07-16 at 11.37.53 PM.jpeg"
+import { Link } from 'react-router-dom';
+import img1 from "../../../recource/WhatsApp_Image_2022-07-16_at_9.56.47_PM-removebg-preview.png"
 const Navbar = () => {
     return (
         <div class="navbar bg-primary text-accent">
@@ -29,9 +30,9 @@ const Navbar = () => {
                             SERVICES
                         </a>
                     </li>
-                    <li><a href="/">LAWYERS</a></li>
-                    <li><a href="/">PRACTICE</a></li>
-                    <li><a href="/">NEWS</a></li>
+                    <li><Link to="/">LAWYERS</Link></li>
+                    <li><Link to="/">PRACTICE</Link></li>
+                    <li><Link to="/News">NEWS</Link></li>
                 </ul>
             </div>
             <div class="navbar-end">
